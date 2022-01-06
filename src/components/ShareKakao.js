@@ -6,7 +6,7 @@ import kakaoLogo from "../images/kakaoLogo.jpeg";
 const ShareImage = styled.img`
   width: 3rem;
   border-radius: 50%;
-  margin-top: 2rem;
+  margin: 2rem 0;
   cursor: pointer;
   &:hover {
     opacity: 0.7;
@@ -22,16 +22,16 @@ const ShareKakao = () => {
       imageUrl:
         "https://media.istockphoto.com/vectors/letter-logo-formed-by-two-parallel-lines-with-noise-texture-vector-id1201523312?k=20&m=1201523312&s=612x612&w=0&h=muC5BerISf25lI9aWRDTUpWABqOADIO_OPfEX2ZkMU0=",
       link: {
-        mobileWebUrl: "http://localhost:3000/",
-        webUrl: "http://localhost:3000/",
+        mobileWebUrl: "https://swfface.netlify.app/",
+        webUrl: "https://swfface.netlify.app/",
       },
     },
     buttons: [
       {
         title: "웹으로 보기",
         link: {
-          mobileWebUrl: "http://localhost:3000/",
-          webUrl: "http://localhost:3000/",
+          mobileWebUrl: "https://swfface.netlify.app/",
+          webUrl: "https://swfface.netlify.app/",
         },
       },
     ],

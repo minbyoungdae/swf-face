@@ -48,7 +48,6 @@ const RemoveImageButton = styled.button`
   &:hover {
     background-color: #ff9979;
   }
-  margin-bottom: 5rem;
 `;
 
 const ImageUploader = () => {

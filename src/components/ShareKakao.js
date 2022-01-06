@@ -11,6 +11,9 @@ const ShareImage = styled.img`
   &:hover {
     opacity: 0.7;
   }
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 `;
 
 const ShareKakao = () => {

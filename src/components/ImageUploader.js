@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import TeachableMachine from "./TeachableMachine";
-import Test from "./Test";
 
 const Wrapper = styled.div`
   width: 12rem;
   height: 12rem;
   position: relative;
   border-radius: 4px;
-  border: 1px solid black;
+  border: 1px dashed black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,6 +16,7 @@ const Wrapper = styled.div`
 const InputFile = styled.h3`
   text-align: center;
   line-height: 9rem;
+  color: gray;
 `;
 
 const InputStyle = styled.input`
@@ -37,11 +37,18 @@ const PreviewImg = styled.img`
 
 const RemoveImageButton = styled.button`
   width: 12rem;
-  height: 2rem;
-  background-color: darkgray;
-  border: 1px solid gray;
+  height: 3rem;
+  background-color: #ff5f2e;
+  border: none;
   color: white;
-  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 15px;
+  cursor: pointer;
+  &:hover {
+    background-color: #ff9979;
+  }
+  margin-bottom: 5rem;
 `;
 
 const ImageUploader = () => {
@@ -58,6 +65,7 @@ const ImageUploader = () => {
       {image ? (
         <>
           <PreviewImg id="face-image" src={image}></PreviewImg>
+          <TeachableMachine />
           <RemoveImageButton
             onClick={() => {
               setImage("");
@@ -65,7 +73,6 @@ const ImageUploader = () => {
           >
             다른 이미지 고르기
           </RemoveImageButton>
-          <Test image={image} />
         </>
       ) : (
         <Wrapper>
@@ -75,7 +82,7 @@ const ImageUploader = () => {
             name="file"
             onChange={ImageChange}
           ></InputStyle>
-          <InputFile htmlFor="input-file">파일 선택하기</InputFile>
+          <InputFile htmlFor="input-file">사진 업로드</InputFile>
         </Wrapper>
       )}
     </>
